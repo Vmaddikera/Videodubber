@@ -14,3 +14,7 @@ Yue Zhang *, Minhao Liu*, Zhaokang Chen, Bin Wu†, Yingjie He, Chao Zhan, Wenji
 - Allows modification of the center point of the face region, which **significantly affects generation results**.
 - Includes a checkpoint trained on the **HDTF dataset**.
 - Provides training codes (**coming soon**).
+
+##Model Structure
+
+MuseTalk was trained in latent spaces, where the images were encoded by a freezed VAE. The audio was encoded by a freezed whisper-tiny model. The architecture of the generation network was borrowed from the UNet of the stable-diffusion-v1-4, where the audio embeddings were fused to the image embeddings by cross-attention.
